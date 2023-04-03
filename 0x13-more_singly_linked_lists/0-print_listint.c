@@ -4,22 +4,23 @@
 #include "lists.h"
 
 /**
- * print_listint - prints all the elements of a listint_t list
- * @head: listint_t list
+ * print_listint - Prints all the elements of a listint_t list
+ * @head: Pointer to the head of the list
  *
- * Return: number of elements in the list
+ * Return: The number of elements in the list
  */
 size_t print_listint(const listint_t *head)
 {
-	const listint_t *temp;
-	size_t d = 0;
+	const listint_t *temp = head;
+	size_t count = 0;
 
-	temp = head;
 	while (temp != NULL)
 	{
 		printf("%d\n", temp->n);
 		temp = temp->next;
-		d++;
+		count++;
 	}
-	return (d);
+
+	return count;
 }
+
